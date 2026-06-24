@@ -20,6 +20,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H boheemia.ee >> ~/.ssh/known_hosts
       - name: Deploy to server
-        run: |         
-          # Transfer built files and server files
-          rsync -rlvz --include='index.html' --include='styles.css' --include='dot.png' --exclude='*' ./ virt65914@boheemia.ee:domeenid/www.boheemia.ee/htdocs
+        run: |
+          ssh virt65914@boheemia.ee "\
+          cd domeenid/www.boheemia.ee/ && \
+          echo 'In directory:' && pwd && \
+          rm -rf htdocs && \
+          mkdir htdocs"
+          rsync -az --exclude='.git' --exclude='.gitignore' ./ virt65914@boheemia.ee:domeenid/www.boheemia.ee/htdocs
