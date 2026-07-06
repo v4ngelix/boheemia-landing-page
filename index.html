@@ -1,51 +1,143 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="styles.css">
-		<title>Andi Angel - Full-stack GIS developer</title>
-		<meta
-			name="description"
-			content="Personal homepage of Andi Angel, a freelance full-stack GIS developer. Find links to profiles and personal projects."
-		/>
-	</head>
-	<body>
-		<div class="boh__dither-gradient-circle"></div>
-		<div class="boh__overview-container">
-			<h1>Andi Angel</h1>
-			<div class="boh__overview-container__profile-links">
-				<a href="https://www.linkedin.com/in/andi-angel/">
-					LinkedIn
-				</a>
-				<span>|</span>
-				<a href="https://github.com/v4ngelix">
-					Github
-				</a>
-				<span>|</span>
-				<a href="https://www.goodreads.com/user/show/196498251-andi-angel">
-					Goodreads
-				</a>
-			</div>
-			<p>
-				Personal projects:
-			</p>
-			<ul>
-				<li>
-					<a href="https://experiments.boheemia.ee/">
-						UI experiments
-					</a>
-				</li>
-				<li>
-					<a href="https://w8.boheemia.ee/">
-						W8-tracker
-					</a>
-				</li>
-				<li>
-					<a href="https://qibla.boheemia.ee/">
-						Qibla finder
-					</a>
-				</li>
-			</ul>
-		</div>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <title>Andi Angel - Full-stack GIS developer</title>
+  <meta
+    name="description"
+    content="Personal homepage of Andi Angel, a freelance full-stack GIS developer. Find links to profiles and personal projects."
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100dvh;
+      font-family: monospace;
+    }
+
+    .boh__dither-gradient-circle {
+      position: relative;
+      border-radius: 5rem;
+      width: 10rem;
+      height: 10rem;
+      background: linear-gradient(
+        rgba(0, 0, 0, 1),
+        rgba(255, 255, 255, 0)
+      );
+
+      &::after {
+        position: absolute;
+        border-radius: 5rem;
+        width: 10rem;
+        height: 10rem;
+        content: '';
+        background: url(./dot.png) repeat;
+      }
+    }
+
+    .boh__overview-container {
+      margin-left: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      line-height: 1;
+    }
+
+    h2 {
+      margin: 0 0 1.5rem;
+      line-height: 1.25;
+      font-weight: 300;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0 0 .5rem;
+    }
+
+    a {
+      display: block;
+      padding: .125rem .25rem;
+      font-family: monospace;
+      text-decoration: none;
+      color: black;
+
+      &:active,
+      &:hover {
+        color: black;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      margin: .75rem 0 .125rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="boh__dither-gradient-circle"></div>
+
+<div class="boh__overview-container">
+  <h1>Andi Angel</h1>
+  <h2>Full-stack GIS developer</h2>
+  <nav>
+    <div>
+
+    <h3>
+      Digital presence:
+    </h3>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/andi-angel/">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/v4ngelix">
+          Github
+        </a>
+      </li>
+      <li>
+        <a href="https://www.goodreads.com/user/show/196498251-andi-angel">
+          Goodreads
+        </a>
+      </li>
+    </ul>
+    </div>
+      <div>
+    <h3>
+      Personal projects:
+    </h3>
+    <ul>
+      <li>
+        <a href="https://experiments.boheemia.ee/">
+          UI experiments
+        </a>
+      </li>
+      <li>
+        <a href="https://w8.boheemia.ee/">
+          W8-tracker
+        </a>
+      </li>
+      <li>
+        <a href="https://qibla.boheemia.ee/">
+          Qibla finder
+        </a>
+      </li>
+    </ul>
+      </div>
+
+  </nav>
+</div>
+</body>
 </html>
